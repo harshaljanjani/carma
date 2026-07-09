@@ -1,0 +1,22 @@
+[project]
+name = "carma"
+version = "0.1.0"
+description = "AI assistant for exploring a used-car inventory, with booking, lead capture, and cross-session memory."
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+    "litellm>=1.50",
+    "pandas>=2.2",
+    "httpx>=0.27",
+    "pydantic>=2.7",
+    "streamlit>=1.38",
+    "python-dotenv>=1.0",
+    "nltk>=3.9",
+    "webcolors>=25.10.0",
+    "rapidfuzz>=3.14.5",
+    "python-dateutil>=2.9.0.post0",
+]
+
+[tool.uv]
+package = false
