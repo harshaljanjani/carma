@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --dz-red: #E4002B;
+    --dz-black: #111114;
+    --dz-white: #ffffff;
+    --dz-muted: #6b6b73;
+    --dz-line: #ededf0;
+}
+
+html, body, [data-testid="stApp"], [class*="css"], input, textarea, button {
+    font-family: 'Inter', sans-serif;
+    color: var(--dz-black);
+}
+
+[data-testid="stApp"] {
+    background: var(--dz-white);
+}
+
+#MainMenu, header[data-testid="stHeader"], footer {
+    visibility: hidden;
+    height: 0;
+}
+
+.block-container {
+    padding-top: 1.2rem;
+    max-width: 760px;
+}
+
+.dz-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--dz-red);
+    margin-bottom: 6px;
+}
+
+.dz-header img {
+    height: 24px;
+}
+
+.dz-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: -0.02em;
+}
+
+.dz-title b {
+    color: var(--dz-red);
+    font-weight: 700;
+}
+
+.dz-hero {
+    text-align: center;
+    margin: 12vh auto 52px;
+    max-width: 560px;
+    animation: dzfade 900ms ease both;
+}
+
+.dz-hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+    margin: 0;
+}
+
+.dz-hero h1 b {
+    color: var(--dz-red);
+    font-weight: 700;
+}
+
+.dz-hero p {
+    color: var(--dz-muted);
+    font-size: 1.05rem;
+    margin-top: 14px;
+}
+
+@keyframes dzfade {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: none; }
+}
+
+[data-testid="stChatMessage"] {
+    animation: dzfade 420ms ease both;
+    background: transparent;
+    padding: 6px 2px;
+    align-items: flex-start;
+}
+
+[data-testid="stChatMessageAvatarUser"],
+[data-testid="stChatMessageAvatarAssistant"] {
+    background: var(--dz-white);
+    border: 1px solid var(--dz-line);
+    padding: 3px;
+}
+
+[data-testid="stExpander"] {
+    border: 1px solid var(--dz-line);
+    border-left: 3px solid var(--dz-red);
+    border-radius: 12px;
+    margin: 8px 0;
+    transition: box-shadow .2s ease;
+}
+
+[data-testid="stExpander"]:hover {
+    box-shadow: 0 6px 18px rgba(17, 17, 20, 0.08);
+}
+
+[data-testid="stExpander"] summary {
+    font-weight: 600;
+}
+
+[data-testid="stExpander"] summary:hover {
+    color: var(--dz-red);
+}
+
+[data-testid="stExpander"] img {
+    border-radius: 8px;
+}
+
+[data-testid="stBottom"],
+[data-testid="stBottomBlockContainer"] {
+    background: var(--dz-white);
+}
+
+[data-testid="stChatInput"] {
+    background: var(--dz-white);
+    border: 1px solid var(--dz-line);
+    border-radius: 8px;
+}
+
+[data-testid="stChatInput"] textarea,
+[data-testid="stChatInput"] div {
+    background: var(--dz-white);
+    color: var(--dz-black);
+}
+
+[data-testid="stChatInput"] textarea::placeholder {
+    color: var(--dz-muted);
+}
+
+[data-testid="stChatInput"]:focus-within {
+    border-color: var(--dz-red);
+    box-shadow: 0 0 0 1px var(--dz-red);
+}
+
+[data-testid="stTextInput"] [data-baseweb="input"],
+[data-testid="stTextInput"] [data-baseweb="base-input"],
+[data-testid="stTextInput"] input {
+    background: var(--dz-white);
+    color: var(--dz-black);
+    border-radius: 8px;
+}
+
+[data-testid="stTextInput"] [data-baseweb="input"] {
+    border: 1px solid var(--dz-line);
+}
+
+[data-testid="stTextInput"] [data-baseweb="input"]:focus-within {
+    border-color: var(--dz-red);
+}
+
+[data-testid="InputInstructions"],
+[data-testid="stWidgetInstructions"] {
+    font-size: 0.4rem;
+    color: var(--dz-muted);
+}
