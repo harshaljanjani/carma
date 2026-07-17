@@ -121,7 +121,7 @@ uv run python eval/eval_conversational.py
 The two retrieval evals use the deterministic heuristic extractor by default; set `EVAL_LLM=1` to
 route filter extraction through the LLM instead.
 
-## Endpoints
+### Endpoints
 
 | Method | Path | Purpose |
 |--------|------|---------|
@@ -133,7 +133,7 @@ route filter extraction through the LLM instead.
 | GET | `/users/{id}` | Long-term profile rehydration |
 | GET | `/health` | Liveness + listing count |
 
-## Out of scope / future work
+### Out of scope / future work
 
 The prototype favours local files and in-memory state. To productionise: migrate the inventory to a data 
 warehouse (Postgres to BigQuery/Snowflake) behind the same retrieval contract; promote lexical search to a 
@@ -143,7 +143,7 @@ turn the one-off enrichment into a streaming pipeline that writes confidence-sco
 memory to managed Postgres; and serve containerised FastAPI replicas behind a load balancer with a LiteLLM 
 Router for multi-key failover, cost tracking, and tracing.
 
-## Layout
+### Layout
 
 ```
 main.py                FastAPI backend
